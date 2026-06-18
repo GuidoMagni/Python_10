@@ -12,4 +12,13 @@ import collections.abc
 artifacts = [{'name': 'Ice Wand', 'power': 119, 'type': 'accessory'}, {'name': 'Water Chalice', 'power': 105, 'type': 'weapon'}, {'name': 'Light Prism', 'power': 97, 'type': 'armor'}, {'name': 'Shadow Blade', 'power': 91, 'type': 'focus'}]
 
 def artifact_sorter(artifacts: list[dict]) -> list[dict]:
-    return(sorted(artifacts))
+    sorted_artifacts = sorted(artifacts, key=lambda x: x[1])
+    print(sorted_artifacts)
+
+
+def main():
+    artifact_sorter(artifacts)
+
+
+if __name__ == "__main__":
+    main()
